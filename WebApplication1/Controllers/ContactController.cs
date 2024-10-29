@@ -36,7 +36,7 @@ public class ContactController : Controller
     public ActionResult Delete(int id)
     {
         _contactService.Delete(id);
-        return View("Index");
+        return RedirectToAction(nameof(System.Index));
     }
 
     public ActionResult Edit(int id)
