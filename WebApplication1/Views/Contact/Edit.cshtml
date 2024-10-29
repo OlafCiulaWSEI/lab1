@@ -1,13 +1,13 @@
-@model WebApplication1.Models.ContactModel
+@model ContactModel
 
 @{
-    ViewBag.Title = "title";
     Layout = "_Layout";
 }
 
-<h2>Dodaj kontakt</h2>
+<h2>Edytuj kontakt</h2>
 <div class="col-6">
-    <form asp-action="Add">
+    <form asp-action="Edit" method="post">
+        <input asp-for="Id"/>
         <div class="mb-3">
             <label class="form-label" asp-for="FirstName"></label>
             <input class="form-control" asp-for="FirstName"/>
@@ -38,6 +38,6 @@
             <select class="form-control" asp-items="@Html.GetEnumSelectList<Category>()" asp-for="Category"></select>
             <span asp-validation-for="Category" class="text-danger"></span>
         </div>
-        <button type="submit" class="btn btn-outline-primary">Dodaj</button>
+        <button type="submit" class="btn btn-outline-primary">Aktualizuj</button>
     </form>
 </div>

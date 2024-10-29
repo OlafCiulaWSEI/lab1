@@ -1,27 +1,25 @@
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Models;
+using WebApplication1.Models.Services;
 
 namespace WebApplication1.Controllers;
 
 public class ContactController : Controller
 {
-    static private Dictionary<int, ContactModel> _contacts= new Dictionary<int, ContactModel>()
-    {
-        {1, new() {Id = 1, Email = "ascfsd@gmail.com",FirstName = "Olaf", LastName = "Ciuła", BirthDate = new DateTime(1970, 10,10), PhoneNumber = "333 333 333"}},
-        {2, new() {Id = 2, Email = "arfsdd@gmail.com",FirstName = "Ola", LastName = "rresgd", BirthDate = new DateTime(1970, 10,10), PhoneNumber = "333 333 333"}}
-    };
 
-    private static int currentID = 0;
+    private IContactService _contactService;
+
+    public ContactController(IContactService contactService)
+    {
+        _contactService = contactService;
+    }
+
     // Lista kontaktów
     public IActionResult Index()
     {
-        return View(_contacts);
+        return View(_contactService.GetAll());
     }
-
-    public ActionResult Add()
-    {
-        return View();
-    }
+    
 
     [HttpPost]
     public ActionResult Add(ContactModel model)
@@ -30,20 +28,36 @@ public class ContactController : Controller
         {
             return View(model);
         }
+        _contactService.Add(model);
 
-        model.Id = ++currentID;
-        _contacts.Add(model.Id, model);
-        return View("Index", _contacts);
+        return View(model);
     }
 
     public ActionResult Delete(int id)
     {
-        _contacts.Remove(id);
-        return View("Index", _contacts);
+        _contactService.Delete(id);
+        return View("Index");
     }
 
+    public ActionResult Edit(int id)
+    {
+        return View(_contactService.GetById(id));
+    }
+
+    [HttpPost]
+    public ActionResult Edit(ContactModel model)
+    {
+        if (!ModelState.IsValid)
+        {
+            return View();
+        }
+
+        _contactService.Update(model);
+        return RedirectToAction(nameof(System.Index));
+    }
+    
     public ActionResult Details(int id)
     {
-        return View(_contacts[id]);
+        return View(_contactService.GetById(id));
     }
 }
