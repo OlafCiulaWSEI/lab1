@@ -42,7 +42,7 @@
                 <td>
                     <a asp-controller="Contact" asp-action="Edit" asp-route-id=@entry.Id class="btn btn-info">Edit</a>
                     <a asp-controller="Contact" asp-action="Details" asp-route-id=@entry.Id class="btn btn-info">Szczegóły</a>
-                    <a asp-controller="Contact" asp-action="Delete" asp-route-id=@entry.Id class="btn btn-danger">Usuń</a>
+                    <a asp-controller="Contact" asp-action="Delete" onclick="return confirmDelete();" asp-route-id=@entry.Id class="btn btn-danger">Usuń</a>
                 </td>
             </tr>
         }
@@ -53,3 +53,9 @@ else
 {
     <h1>Brak kontaktów</h1>
 }
+
+<script>
+    function confirmDelete() {
+        return confirm('Czy na pewno chcesz usunąć ten kontakt?');
+    }
+</script>
