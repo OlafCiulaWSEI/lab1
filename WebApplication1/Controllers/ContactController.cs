@@ -19,6 +19,11 @@ public class ContactController : Controller
     {
         return View(_contactService.GetAll());
     }
+
+    public ActionResult Add()
+    {
+        return View();
+    }
     
 
     [HttpPost]
@@ -30,7 +35,7 @@ public class ContactController : Controller
         }
         _contactService.Add(model);
 
-        return View(model);
+        return RedirectToAction(nameof(System.Index));
     }
 
     public ActionResult Delete(int id)

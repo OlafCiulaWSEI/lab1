@@ -21,7 +21,7 @@ public class MemoryContactService:IContactService
             }
         }
     };
-    private static int currentID = 0;
+    private int currentID = 3;
     public void Add(ContactModel model)
     {
         model.Id = ++currentID;

@@ -9,39 +9,55 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebApplication1
 build_property.RootNamespace = WebApplication1
-build_property.ProjectDir = D:\Users\olaf.ciula\RiderProjects\WebApplication1\WebApplication1\
+build_property.ProjectDir = D:\Users\olaf.ciula\RiderProjects\Laboratorium-ASP-.NET\WebApplication1\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Users\olaf.ciula\RiderProjects\WebApplication1\WebApplication1
+build_property.MSBuildProjectDirectory = D:\Users\olaf.ciula\RiderProjects\Laboratorium-ASP-.NET\WebApplication1
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Users/olaf.ciula/RiderProjects/WebApplication1/WebApplication1/Views/Home/Index.cshtml]
+[D:/Users/olaf.ciula/RiderProjects/Laboratorium-ASP-.NET/WebApplication1/Views/Contact/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/olaf.ciula/RiderProjects/Laboratorium-ASP-.NET/WebApplication1/Views/Contact/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/olaf.ciula/RiderProjects/Laboratorium-ASP-.NET/WebApplication1/Views/Contact/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/olaf.ciula/RiderProjects/Laboratorium-ASP-.NET/WebApplication1/Views/Contact/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/olaf.ciula/RiderProjects/Laboratorium-ASP-.NET/WebApplication1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/olaf.ciula/RiderProjects/WebApplication1/WebApplication1/Views/Home/Privacy.cshtml]
+[D:/Users/olaf.ciula/RiderProjects/Laboratorium-ASP-.NET/WebApplication1/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/olaf.ciula/RiderProjects/WebApplication1/WebApplication1/Views/Shared/Error.cshtml]
+[D:/Users/olaf.ciula/RiderProjects/Laboratorium-ASP-.NET/WebApplication1/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/olaf.ciula/RiderProjects/WebApplication1/WebApplication1/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Users/olaf.ciula/RiderProjects/Laboratorium-ASP-.NET/WebApplication1/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/olaf.ciula/RiderProjects/WebApplication1/WebApplication1/Views/_ViewImports.cshtml]
+[D:/Users/olaf.ciula/RiderProjects/Laboratorium-ASP-.NET/WebApplication1/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/olaf.ciula/RiderProjects/WebApplication1/WebApplication1/Views/_ViewStart.cshtml]
+[D:/Users/olaf.ciula/RiderProjects/Laboratorium-ASP-.NET/WebApplication1/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Users/olaf.ciula/RiderProjects/WebApplication1/WebApplication1/Views/Shared/_Layout.cshtml]
+[D:/Users/olaf.ciula/RiderProjects/Laboratorium-ASP-.NET/WebApplication1/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-bddmc6yalx
