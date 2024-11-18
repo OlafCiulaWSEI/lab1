@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\olaf.ciula\\RiderProjects\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {}
+    "C:\\Users\\fanta\\RiderProjects\\Laboratorium-ASP-.NET\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "D:\\Users\\olaf.ciula\\RiderProjects\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {
+    "C:\\Users\\fanta\\RiderProjects\\Laboratorium-ASP-.NET\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\olaf.ciula\\RiderProjects\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "C:\\Users\\fanta\\RiderProjects\\Laboratorium-ASP-.NET\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "D:\\Users\\olaf.ciula\\RiderProjects\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
-        "packagesPath": "D:\\Users\\olaf.ciula\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\olaf.ciula\\RiderProjects\\WebApplication1\\WebApplication1\\obj\\",
+        "projectPath": "C:\\Users\\fanta\\RiderProjects\\Laboratorium-ASP-.NET\\WebApplication1\\WebApplication1.csproj",
+        "packagesPath": "C:\\Users\\fanta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fanta\\RiderProjects\\Laboratorium-ASP-.NET\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "D:\\Users\\olaf.ciula\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\fanta\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,11 +32,47 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

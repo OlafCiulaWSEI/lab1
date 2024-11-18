@@ -24,7 +24,7 @@ public class ContactController : Controller
     public ActionResult Add()
     {
         var model = new ContactModel();
-        model.Organizations = _contactService.findAllOrganizations()
+        model.Organizations = _contactService.FindAllOrganizations()
             .Select(o => new SelectListItem()
             {
                 Value = o.Id.ToString(),

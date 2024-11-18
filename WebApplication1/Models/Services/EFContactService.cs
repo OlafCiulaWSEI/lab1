@@ -40,10 +40,11 @@ public class EFContactService: IContactService
         var entity = _context.Contacts.
                 Include(e => e.Organization)
                 .FirstOrDefault(e => e.Id == id);
+        // var entity = _context.Contacts.Find(id);
         return entity != null? ContactMapper.FromEntity(entity) : null;
     }
 
-    public List<OrganizationEntity> findAllOrganizations()
+    public List<OrganizationEntity> FindAllOrganizations()
     {
         return _context.Organizations.ToList();
     }
