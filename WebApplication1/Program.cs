@@ -1,13 +1,30 @@
 using WebApplication1.Models;
 using WebApplication1.Models.Services;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("AppDbContextConnection") ?? throw new InvalidOperationException("Connection string 'AppDbContextConnection' not found.");
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 builder.Services.AddDbContext<AppDbContext>();
-builder.Services.AddTransient<IContactService, EFContactService>();
+builder.Services.AddDefaultIdentity<IdentityUser>(o =>
+    {
+        o.SignIn.RequireConfirmedAccount = true;
+        o.Password.RequiredLength = 5;
+        o.Password.RequireNonAlphanumeric = false;
+        o.Password.RequireUppercase = false;
+        o.Password.RequiredUniqueChars = 0;
+    })
+    .AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<AppDbContext>();
 
+
+builder.Services.AddTransient<IContactService, EFContactService>();
+builder.Services.AddMemoryCache();
+builder.Services.AddSession();
 var app = builder.Build();
 
 
@@ -24,7 +41,11 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
+app.UseSession();
+
+app.MapRazorPages();
 
 app.MapControllerRoute(
     name: "default",

@@ -1,8 +1,10 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace WebApplication1.Models;
 
-public class AppDbContext: DbContext
+public class AppDbContext: IdentityDbContext<IdentityUser>
 {
     public DbSet<ContactEntity> Contacts {
         get;
@@ -27,6 +29,71 @@ public class AppDbContext: DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        base.OnModelCreating(modelBuilder);
+        
+        string ADMIN_ID = Guid.NewGuid().ToString();
+        string USER_ID = Guid.NewGuid().ToString();
+
+        modelBuilder.Entity<IdentityRole>()
+            .HasData(
+                new IdentityRole()
+                {
+                    Id = ADMIN_ID,
+                    Name = "admin",
+                    NormalizedName = "ADMIN",
+                    ConcurrencyStamp = ADMIN_ID
+                },
+                new IdentityRole()
+                {
+                    Id = USER_ID,
+                    Name = "user",
+                    NormalizedName = "USER",
+                    ConcurrencyStamp = USER_ID
+                }
+                );
+
+        var admin = new IdentityUser()
+        {
+            Id = ADMIN_ID,
+            UserName = "Olaf",
+            NormalizedUserName = "OLAF",
+            Email = "olaf@wsei.edu.pl",
+            NormalizedEmail = "OLAF@WSEI.EDU.PL",
+            EmailConfirmed = true,
+        };
+
+        var user = new IdentityUser()
+        {
+            Id = USER_ID,
+            UserName = "Kuba",
+            NormalizedUserName = "KUBA",
+            Email = "kuba@wsei.edu.pl",
+            NormalizedEmail = "KUBA@WSEI.EDU.PL",
+            EmailConfirmed = true
+        };
+
+        PasswordHasher<IdentityUser> hasher = new PasswordHasher<IdentityUser>();
+
+        admin.PasswordHash = hasher.HashPassword(admin, "1234!");
+        user.PasswordHash = hasher.HashPassword(user, "qwerty123!");
+
+        modelBuilder.Entity<IdentityUser>()
+            .HasData(admin, user);
+
+        modelBuilder.Entity<IdentityUserRole<string>>()
+            .HasData(
+                new IdentityUserRole<string>()
+                {
+                    RoleId = ADMIN_ID,
+                    UserId = ADMIN_ID
+                },
+                new IdentityUserRole<string>()
+                {
+                    RoleId = USER_ID,
+                    UserId = USER_ID
+                }
+                );
+        
         modelBuilder.Entity<OrganizationEntity>()
             .OwnsOne(o => o.Address)
             .HasData(

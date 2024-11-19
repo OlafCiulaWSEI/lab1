@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fanta\\RiderProjects\\Laboratorium-ASP-.NET\\WebApplication1\\WebApplication1.csproj": {}
+    "D:\\Users\\olaf.ciula\\RiderProjects\\Laboratorium-ASP-.NET\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fanta\\RiderProjects\\Laboratorium-ASP-.NET\\WebApplication1\\WebApplication1.csproj": {
+    "D:\\Users\\olaf.ciula\\RiderProjects\\Laboratorium-ASP-.NET\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fanta\\RiderProjects\\Laboratorium-ASP-.NET\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "D:\\Users\\olaf.ciula\\RiderProjects\\Laboratorium-ASP-.NET\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "C:\\Users\\fanta\\RiderProjects\\Laboratorium-ASP-.NET\\WebApplication1\\WebApplication1.csproj",
-        "packagesPath": "C:\\Users\\fanta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fanta\\RiderProjects\\Laboratorium-ASP-.NET\\WebApplication1\\obj\\",
+        "projectPath": "D:\\Users\\olaf.ciula\\RiderProjects\\Laboratorium-ASP-.NET\\WebApplication1\\WebApplication1.csproj",
+        "packagesPath": "D:\\Users\\olaf.ciula\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\olaf.ciula\\RiderProjects\\Laboratorium-ASP-.NET\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\fanta\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "D:\\Users\\olaf.ciula\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -36,14 +38,21 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.10, )"
@@ -92,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
